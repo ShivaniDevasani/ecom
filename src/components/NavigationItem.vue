@@ -15,14 +15,14 @@
                             <img class="large-icon" src="../../public/arrow-outline.png" alt="">
                         </div>
                     </div>
-                    <div v-if="menuId === subItem.id" class="ecom-nav-tier2">
-                        <div v-for="subSub in subItem.sub" :key="subSub.name">
+                    <ul v-if="menuId === subItem.id" class="ecom-nav-tier2">
+                        <li class="tier2-item" v-for="subSub in subItem.sub" :key="subSub.name">
                             <h4>{{subSub.name}}</h4>
                             <div v-for="child in subSub.sub" :key="child.name">
                                 <p>{{child.name}}</p>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div v-else>
@@ -121,18 +121,20 @@ export default {
         right: 0;
         top: 0;
         flex-direction: column;
-        padding: 20px;
+        padding: 10px;
         width: calc(80% - 70px);
         background-color: #f5f5dc;
+        display: block;
         h4{
             margin: 5px 0px;
         }
         p{
             margin: 2px 0px;
+            font-size: 13px;
         }
-        display: grid;
-        // grid-template-columns: repeat(auto-fit, minmax(9%, 1fr));
-		// grid-template-rows: repeat(auto-fill, minmax(4%, 1fr));
+        column-count: 2;
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
     }
     .header-icon{
         display: flex;
@@ -143,5 +145,11 @@ export default {
             height: 15px;
             margin: 0px 10px 0px 10px;
         }
+    }
+    .tier2-item{
+        display: block;
+        text-align: left;
+        padding-left: 100px;
+        margin-bottom: 20px;
     }
 </style>
