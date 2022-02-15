@@ -1,0 +1,195 @@
+{
+    "list":[
+        {
+            "name":"Jewellery & Accessories",
+            "slug":"jewellery-and-accessories",
+            "image":"https://i.etsystatic.com/6716208/c/1763/1763/0/226/il/42ff7b/1376060522/il_300x300.1376060522_bf89.jpg"
+        },
+        {
+            "name":"Clothing & Shoes",
+            "slug":"clothing-and-shoes",
+            "image":"https://i.etsystatic.com/5117032/c/723/723/204/280/il/905342/1701142357/il_300x300.1701142357_fjsi.jpg"
+        },
+        {
+            "name":"Home & Living",
+            "slug":"home-and-living",
+            "image":"https://i.etsystatic.com/16182860/c/2000/2000/0/1000/il/37729a/3095742567/il_300x300.3095742567_idy9.jpg",
+            "sub":[
+                {
+                    "name":"Home",
+                    "hovered":true,
+                    "id":1,
+                    "sub":[
+                        {
+                            "name":"Home Decor",
+                            "sub":[
+                                {
+                                    "name":"Wall Decor"
+                                },
+                                {
+                                    "name":"Decorative Cushions"
+                                },
+                                {
+                                    "name":"Picture Frames & Displays"
+                                },
+                                {
+                                    "name":"Candles & Holders"
+                                },
+                                {
+                                    "name":"Clocks"
+                                },
+                                {
+                                    "name":"Vases"
+                                }
+                            ]
+                        },
+                        {
+                            "name":"Rugs"
+                        },
+                        {
+                            "name":"Furniture",
+                            "sub":[
+                                {
+                                    "name":"Bedroom Furniture"
+                                },
+                                {
+                                    "name":"Dining Room Furniture"
+                                },
+                                {
+                                    "name":"Kids' Furniture"
+                                },
+                                {
+                                    "name":"Living Room Furniture"
+                                }
+                            ]
+                        },
+                        {
+                            "name":"Bedding"
+                        },
+                        {
+                            "name":"Bathroom"
+                        },
+                        {
+                            "name":"Outdoor & Gardening"
+                        },
+                        {
+                            "name":"Storage & Organisation"
+                        },
+                        {
+                            "name":"Office"
+                        },
+                        {
+                            "name":"Lighting"
+                        },
+                        {
+                            "name":"Kitchen & Dining",
+                            "sub":[
+                                {
+                                    "name":"Cookware"
+                                },
+                                {
+                                    "name":"Drink &Barware"
+                                },
+                                {
+                                    "name":"Serveware"
+                                }
+                            ]
+                        },
+                        {
+                            "name":"Food & Drinks"
+                        },
+                        {
+                            "name":"Spirituality & Religion"
+                        }
+                    ]
+                },
+                {
+                    "name":"Bath & Beauty",
+                    "hovered":false,
+                    "id":2,
+                    "sub":[
+                        {
+                            "name":"Bath Accessories"
+                        },
+                        {
+                            "name":"Makeup & Cosmetics"
+                        },
+                        {
+                            "name":"Skin Care"
+                        },
+                        {
+                            "name":"Hair Care"
+                        },
+                        {
+                            "name":"Essential Oils"
+                        },
+                        {
+                            "name":"Fragrances"
+                        },
+                        {
+                            "name":"Soaps & Bath Bombs"
+                        },
+                        {
+                            "name":"Face Masks & Coverings"
+                        },
+                        {
+                            "name":"Spa kits & Gifts"
+                        }
+                    ]
+                },
+                {
+                    "name":"Pet Supplies",
+                    "hovered":false,
+                    "id":3,
+                    "sub":[
+                        {
+                            "name":"Pet Collars & Leashes"
+                        },
+                        {
+                            "name":"Pet Furniture"
+                        },
+                        {
+                            "name":"Pet Clothing & Shoes",
+                            "sub":[
+                                {
+                                    "name":"Pet Jackets & Hoodies"
+                                }
+                            ]
+                        },
+                        {
+                            "name":"Pet Bedding"
+                        },
+                        {
+                            "name":"Pet Carriers & Houses"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name":"Wedding & Party",
+            "slug":"wedding-and-party",
+            "image":"https://i.etsystatic.com/10423308/c/932/932/312/10/il/4e5137/1170072056/il_300x300.1170072056_95aj.jpg"
+        },
+        {
+            "name":"Toys & Entertainment",
+            "slug":"toys-and-entertainment",
+            "image":"https://i.etsystatic.com/11636031/c/2955/2955/0/1/il/776f1b/3382496932/il_300x300.3382496932_obki.jpg"
+        },
+        {
+            "name":"Art & Collectibles",
+            "slug":"art-and-collectibles",
+            "image":"https://i.etsystatic.com/11991447/c/426/426/0/32/il/a3bd71/2751062303/il_300x300.2751062303_92dj.jpg"
+        },
+        {
+            "name":"Craft Supplies & Tools",
+            "slug":"craft-supplies-and-tools",
+            "image":"https://i.etsystatic.com/8973590/r/il/115c66/633716640/il_300x300.633716640_37im.jpg"
+        },
+        {
+            "name":"Vintage",
+            "slug":"vintage",
+            "image":"https://i.etsystatic.com/17584790/r/il/b26f6c/2325744627/il_300x300.2325744627_ft64.jpg"
+        }
+    ]
+}
