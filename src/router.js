@@ -6,6 +6,9 @@ import SignUp from './views/SignUp.vue'
 import ProductsList from './views/ProductsList.vue'
 import SuperCat from './views/SuperCategory.vue'
 import WishList from './views/WishList.vue'
+import SubCat from './views/SubCategory.vue'
+import Group from './views/CategoryGroup.vue'
+import Cat from './views/Category.vue'
 
 Vue.use(Router)
 
@@ -42,8 +45,20 @@ export default new Router({
             }
         },
         {
-            path:'/products/:supercat/:cat/:subcat/:type',
+            path:'/products/:supercat/:group/:cat/:subcat/:type',
             component:ProductsList
+        },
+        {
+            path:'/products/:supercat/:group/:cat/:subcat',
+            component:SubCat
+        },
+        {
+            path:'/products/:supercat/:group/:cat',
+            component:Cat
+        },
+        {
+            path:'/products/:supercat/:group',
+            component:Group
         },
         {
             path:'/products/:supercat',

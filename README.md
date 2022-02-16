@@ -1,12 +1,12 @@
 # ecom
-E-commerce site
+E-commerce site POC
 
 To run in local open 2 terminals
-1. For backend npm start
-2. For frontend npm run serve
+1. For backend --> "npm start"
+2. For frontend --> "npm run serve"
 
 * Home page: http://localhost:8080
-* Products page: http://localhost:8080/products/home-and-living/furniture/kids-furniture/toddler-beds
+* Products page: http://localhost:8080/products/home-and-living/home/furniture/kids-furniture/toddler-beds
 * SignUp and navigate to Products page.
 * Wishlisting products without signing in is not yet implemented. So to check wishlisting feature please signin.
 * Add/remove products from wishlist.

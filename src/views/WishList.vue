@@ -13,9 +13,13 @@
 <script>
 import {  mapState } from "vuex";
 import commonComponents from "../mixins/commonComponents"
+import ProductItem from '../components/ProductItem.vue'
 
 export default {
     mixins:[commonComponents],
+    components:{
+        ProductItem
+    },
     computed:{
         ...mapState(["wishedProducts"])
     }

@@ -174,8 +174,8 @@ app.get("/wish",(req,res)=>{
 })
 
 app.get("/products",(req, res)=>{
-  const {cat, subcat, supercat, type} = req.query
-  const results = productsData.products.filter(product => ((product.cat_slug === cat) && (product.subcat_slug === subcat) && (product.supercat_slug === supercat) && (product.type_slug === type)));
+  const {cat, group, subcat, supercat, type} = req.query
+  const results = productsData.products.filter(product => ((product.cat_slug === cat) && (product.group_slug === group) && (product.subcat_slug === subcat) && (product.supercat_slug === supercat) && (product.type_slug === type)));
   res.send(results)
 })
 

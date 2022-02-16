@@ -7,7 +7,7 @@
             <div v-if="item.sub">
                 <div class="ecom-nav-tier" v-for="subItem in item.sub" :key="subItem.name">
                     <div class="ecom-nav-tier1" :class="{'hover-nav-item': menuId === subItem.id}" v-on:mouseover="changeMenuId(subItem.id)">
-                        <p>{{subItem.name}}</p>
+                        <a :href="`/products/${item.slug}/${subItem.slug}`">{{subItem.name}}</a>
                         <div v-if="menuId === subItem.id" class="header-icon">
                             <img class="large-icon" src="../../public/arrow-solid.png" alt="">
                         </div>
@@ -17,9 +17,9 @@
                     </div>
                     <ul v-if="menuId === subItem.id" class="ecom-nav-tier2">
                         <li class="tier2-item" v-for="subSub in subItem.sub" :key="subSub.name">
-                            <h4>{{subSub.name}}</h4>
+                            <a class="tier-title" :href="`/products/${item.slug}/${subItem.slug}/${subSub.slug}`">{{subSub.name}}</a>
                             <div v-for="child in subSub.sub" :key="child.name">
-                                <p>{{child.name}}</p>
+                                <a :href="`/products/${item.slug}/${subItem.slug}/${subSub.slug}/${child.slug}`">{{child.name}}</a>
                             </div>
                         </li>
                     </ul>
@@ -108,8 +108,13 @@ export default {
         padding: 0px 5px;
         cursor: pointer;
         justify-content: space-between;
-        p{
+        a{
             margin: 10px 0px;
+            text-decoration: none;
+            color: black;
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
     .hover-nav-item{
@@ -125,12 +130,19 @@ export default {
         width: calc(80% - 70px);
         background-color: #f5f5dc;
         display: block;
-        h4{
-            margin: 5px 0px;
-        }
-        p{
+        a{
             margin: 2px 0px;
             font-size: 13px;
+            text-decoration: none;
+            color: black;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+        .tier-title{
+            margin: 5px 0px;
+            font-size: 15px;
+            font-weight: 700;
         }
         column-count: 2;
         -webkit-column-count: 2;

@@ -21,7 +21,7 @@ export default {
   async mounted(){
     await this.verifyUser()
     const params = this.$route.params
-    if(params.cat && params.subcat && params.supercat && params.type){
+    if(params.cat && params.group && params.subcat && params.supercat && params.type){
       await this.getProducts(params)
       await this.wishlistItems()
     }
@@ -52,7 +52,7 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
   #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -62,5 +62,12 @@ export default {
   }
   body{
     margin: 0;
+  }
+  .list-content{
+    min-height: 100vh;
+    background-color: #749490;
+    p{
+      margin: 0;
+    }
   }
 </style>

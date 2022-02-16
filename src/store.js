@@ -24,7 +24,7 @@ export default new Vuex.Store({
       state.token = null
       state.products = []
       state.wishedProducts = []
-      //get token of local user and set the products and wishedProducts from token.
+      //for local user get token of local user and set the products and wishedProducts from token.
     },
     removeToken(){
       localStorage.removeItem('user');
@@ -38,8 +38,8 @@ export default new Vuex.Store({
   },
   actions: {
     async getProducts({commit},params){
-      const {cat,subcat,supercat,type}=params
-      const list = await axios.get(`http://localhost:3000/products?cat=${cat}&subcat=${subcat}&supercat=${supercat}&type=${type}`)
+      const {cat,group,subcat,supercat,type}=params
+      const list = await axios.get(`http://localhost:3000/products?cat=${cat}&group=${group}&subcat=${subcat}&supercat=${supercat}&type=${type}`)
       commit('setProducts',list.data)
     },
     async updateWishlist({commit},params){
@@ -65,6 +65,7 @@ export default new Vuex.Store({
     },
     async wishlistItems({commit,state}){
       if(state.user){
+        console.log('enter');
       const wishlist = state.user.wishlist
       const result = state.products.map(product => {
         if(wishlist.indexOf(product.id)>-1){

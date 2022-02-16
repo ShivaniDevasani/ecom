@@ -3,7 +3,7 @@
         <Header/>
         <NavigationBar/>
         <div class="list-content">
-            <p>Super Category Page</p>
+            <p>Category Group Page</p>
         </div>
         <Footer/>
     </div>
