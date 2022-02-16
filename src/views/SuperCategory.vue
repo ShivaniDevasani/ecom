@@ -10,8 +10,9 @@
 </template>
 <script>
 import commonComponents from "../mixins/commonComponents"
+import categoryDetails from "../mixins/categoryDetails"
 
 export default {
-    mixins:[commonComponents],
+    mixins:[commonComponents,categoryDetails],
 }
 </script>

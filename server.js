@@ -6,6 +6,7 @@ const app = express();
 const port = 3000;
 const productsData = require("./src/db/products.json");
 const users = require("./src/db/usersData.json");
+const categories = require("./src/db/navigationData.json");
 const fs = require('fs');
 
 
@@ -177,6 +178,32 @@ app.get("/products",(req, res)=>{
   const {cat, group, subcat, supercat, type} = req.query
   const results = productsData.products.filter(product => ((product.cat_slug === cat) && (product.group_slug === group) && (product.subcat_slug === subcat) && (product.supercat_slug === supercat) && (product.type_slug === type)));
   res.send(results)
+})
+
+app.get("/category",(req, res)=>{
+  const {cat, group, subcat, supercat} = req.query
+  if(supercat){
+    const supercatList = categories.list.filter(product => (product.slug === supercat));
+    if(group){
+      const groupList = supercatList[0].sub.filter(product => (product.slug === group));
+      if(cat){
+        const catList = groupList[0].sub.filter(product => (product.slug === cat));
+        if(subcat){
+          const subcatList = catList[0].sub.filter(product => (product.slug === subcat));
+          res.send(subcatList)
+        }
+        else{
+          res.send(catList)
+        }
+      }
+      else{
+        res.send(groupList)
+      }
+    }
+    else{
+      res.send(supercatList)
+    }
+  }
 })
 
 app.listen(port, () => {

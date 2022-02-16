@@ -9,7 +9,8 @@ export default new Vuex.Store({
     user: null,
     token: null,
     products:[],
-    wishedProducts:[]
+    wishedProducts:[],
+    pagetype:''
   },
   mutations: {
     setUser(state, user) {
@@ -34,6 +35,9 @@ export default new Vuex.Store({
     },
     setWishlist(state, list){
       state.wishedProducts = list
+    },
+    setPagetype(state, val) {
+      state.pagetype = val
     }
   },
   actions: {
@@ -65,7 +69,6 @@ export default new Vuex.Store({
     },
     async wishlistItems({commit,state}){
       if(state.user){
-        console.log('enter');
       const wishlist = state.user.wishlist
       const result = state.products.map(product => {
         if(wishlist.indexOf(product.id)>-1){
@@ -74,6 +77,36 @@ export default new Vuex.Store({
         return product
       })
       commit('setProducts',result)
+      }
+    },
+    async getCategoryPageDetails({commit},params){
+      const {cat,group,subcat,supercat}=params
+      let list = []
+      if(supercat){
+        if(group){
+          if(cat){
+            if(subcat){
+              list = await axios.get(`http://localhost:3000/category?cat=${cat}&group=${group}&subcat=${subcat}&supercat=${supercat}`)
+              commit('setPagetype','Sub Category')
+              return list.data
+            }
+            else{
+              list = await axios.get(`http://localhost:3000/category?cat=${cat}&group=${group}&supercat=${supercat}`)
+              commit('setPagetype','Category')
+              return list.data
+            }
+          }
+          else{
+            list = await axios.get(`http://localhost:3000/category?group=${group}&supercat=${supercat}`)
+            commit('setPagetype','Category Group')
+            return list.data
+          }
+        }
+        else{
+          list = await axios.get(`http://localhost:3000/category?supercat=${supercat}`)
+          commit('setPagetype','Super Category')
+          return list.data
+        }
       }
     }
   },

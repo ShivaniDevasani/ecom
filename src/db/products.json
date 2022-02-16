@@ -44,11 +44,11 @@
                     "image":"https://i.etsystatic.com/iap/a9c832/2981658288/iap_300x300.2981658288_agjw6ttp.jpg?version=0"
                 }
             ],
-            "reviewscount":"3",
+            "reviewscount":3,
             "bestseller":true,
             "wishlisted":false,
-            "currentcost":"27835",
-            "actualcost":"27835"
+            "actualcost":"27835",
+            "currentcost":"13823"
         },
         {
             "id":"2",
@@ -64,7 +64,7 @@
             "cat_slug":"furniture",
             "subcat_slug":"kids-furniture",
             "type_slug":"toddler-beds",
-            "rating":5,
+            "rating":4,
             "reviews":[
                 {
                     "rating":5,
@@ -94,11 +94,11 @@
                     "image":"https://i.etsystatic.com/iap/a9c832/2981658288/iap_300x300.2981658288_agjw6ttp.jpg?version=0"
                 }
             ],
-            "reviewscount":"3",
+            "reviewscount":3,
             "bestseller":false,
             "wishlisted":false,
-            "currentcost":"27835",
-            "actualcost":"27835"
+            "actualcost":"27835",
+            "currentcost":"13823"
         },
         {
             "id":"3",
@@ -114,7 +114,7 @@
             "cat_slug":"furniture",
             "subcat_slug":"kids-furniture",
             "type_slug":"toddler-beds",
-            "rating":5,
+            "rating":3,
             "reviews":[
                 {
                     "rating":5,
@@ -144,11 +144,11 @@
                     "image":"https://i.etsystatic.com/iap/a9c832/2981658288/iap_300x300.2981658288_agjw6ttp.jpg?version=0"
                 }
             ],
-            "reviewscount":"3",
-            "bestseller":true,
+            "reviewscount":3,
+            "bestseller":false,
             "wishlisted":false,
-            "currentcost":"27835",
-            "actualcost":"27835"
+            "actualcost":"27835",
+            "currentcost":"13823"
         },
         {
             "id":"4",
@@ -194,11 +194,11 @@
                     "image":"https://i.etsystatic.com/iap/a9c832/2981658288/iap_300x300.2981658288_agjw6ttp.jpg?version=0"
                 }
             ],
-            "reviewscount":"3",
+            "reviewscount":3,
             "bestseller":true,
             "wishlisted":false,
-            "currentcost":"27835",
-            "actualcost":"27835"
+            "actualcost":"27835",
+            "currentcost":"13823"
         },
         {
             "id":"5",
@@ -214,7 +214,7 @@
             "cat_slug":"furniture",
             "subcat_slug":"kids-furniture",
             "type_slug":"toddler-beds",
-            "rating":5,
+            "rating":1,
             "reviews":[
                 {
                     "rating":5,
@@ -244,11 +244,11 @@
                     "image":"https://i.etsystatic.com/iap/a9c832/2981658288/iap_300x300.2981658288_agjw6ttp.jpg?version=0"
                 }
             ],
-            "reviewscount":"3",
+            "reviewscount":3,
             "bestseller":true,
             "wishlisted":false,
-            "currentcost":"27835",
-            "actualcost":"27835"
+            "actualcost":"27835",
+            "currentcost":"13823"
         },
         {
             "id":"6",
@@ -294,11 +294,11 @@
                     "image":"https://i.etsystatic.com/iap/a9c832/2981658288/iap_300x300.2981658288_agjw6ttp.jpg?version=0"
                 }
             ],
-            "reviewscount":"3",
+            "reviewscount":3,
             "bestseller":true,
             "wishlisted":false,
-            "currentcost":"27835",
-            "actualcost":"27835"
+            "actualcost":"27835",
+            "currentcost":"13823"
         },
         {
             "id":"7",
@@ -344,11 +344,11 @@
                     "image":"https://i.etsystatic.com/iap/a9c832/2981658288/iap_300x300.2981658288_agjw6ttp.jpg?version=0"
                 }
             ],
-            "reviewscount":"3",
+            "reviewscount":3,
             "bestseller":true,
             "wishlisted":false,
-            "currentcost":"27835",
-            "actualcost":"27835"
+            "actualcost":"27835",
+            "currentcost":"13823"
         },
         {
             "id":"8",
@@ -394,11 +394,11 @@
                     "image":"https://i.etsystatic.com/iap/a9c832/2981658288/iap_300x300.2981658288_agjw6ttp.jpg?version=0"
                 }
             ],
-            "reviewscount":"3",
+            "reviewscount":3,
             "bestseller":true,
             "wishlisted":false,
-            "currentcost":"27835",
-            "actualcost":"27835"
+            "actualcost":"27835",
+            "currentcost":"13823"
         },
         {
             "id":"9",
@@ -444,11 +444,11 @@
                     "image":"https://i.etsystatic.com/iap/a9c832/2981658288/iap_300x300.2981658288_agjw6ttp.jpg?version=0"
                 }
             ],
-            "reviewscount":"3",
+            "reviewscount":3,
             "bestseller":true,
             "wishlisted":false,
-            "currentcost":"27835",
-            "actualcost":"27835"
+            "actualcost":"27835",
+            "currentcost":"13823"
         }
     ]
 }

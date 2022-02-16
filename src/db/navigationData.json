@@ -18,59 +18,72 @@
                 {
                     "name":"Home",
                     "slug":"home",
+                    "image":"",
                     "hovered":true,
                     "id":1,
                     "sub":[
                         {
                             "name":"Home Decor",
                             "slug":"home-decor",
+                            "image":"",
                             "sub":[
                                 {
                                     "name":"Wall Decor",
-                                    "slug":"wall-decor"
+                                    "slug":"wall-decor",
+                                    "image":""
                                 },
                                 {
                                     "name":"Decorative Cushions",
-                                    "slug":"decorative-cushions"
+                                    "slug":"decorative-cushions",
+                                    "image":""
                                 },
                                 {
                                     "name":"Picture Frames & Displays",
-                                    "slug":"picture-frames-and-displays"
+                                    "slug":"picture-frames-and-displays",
+                                    "image":""
                                 },
                                 {
                                     "name":"Candles & Holders",
-                                    "slug":"candles-and-holders"
+                                    "slug":"candles-and-holders",
+                                    "image":""
                                 },
                                 {
                                     "name":"Clocks",
-                                    "slug":"clocks"
+                                    "slug":"clocks",
+                                    "image":""
                                 },
                                 {
                                     "name":"Vases",
-                                    "slug":"vases"
+                                    "slug":"vases",
+                                    "image":""
                                 }
                             ]
                         },
                         {
                             "name":"Rugs",
-                            "slug":"rugs"
+                            "slug":"rugs",
+                            "image":""
                         },
                         {
                             "name":"Furniture",
                             "slug":"furniture",
+                            "image":"",
                             "sub":[
                                 {
                                     "name":"Bedroom Furniture",
-                                    "slug":"bedroom-furniture"
+                                    "slug":"bedroom-furniture",
+                                    "image":""
                                 },
                                 {
                                     "name":"Dining Room Furniture",
-                                    "slug":"dining-room-furniture"
+                                    "slug":"dining-room-furniture",
+                                    "image":""
                                 },
                                 {
                                     "name":"Kids' Furniture",
                                     "slug":"kids-furniture",
-                                    "list":[
+                                    "image":"",
+                                    "sub":[
                                         {
                                             "name":"Toddler Beds",
                                             "slug":"toddler-beds",
@@ -110,123 +123,150 @@
                                 },
                                 {
                                     "name":"Living Room Furniture",
-                                    "slug":"living-room-furniture"
+                                    "slug":"living-room-furniture",
+                                    "image":""
                                 }
                             ]
                         },
                         {
                             "name":"Bedding",
-                            "slug":"bedding"
+                            "slug":"bedding",
+                            "image":""
                         },
                         {
                             "name":"Bathroom",
-                            "slug":"bathroom"
+                            "slug":"bathroom",
+                            "image":""
                         },
                         {
                             "name":"Outdoor & Gardening",
-                            "slug":"outdoor-and-gardening"
+                            "slug":"outdoor-and-gardening",
+                            "image":""
                         },
                         {
                             "name":"Storage & Organisation",
-                            "slug":"storage-and-organisation"
+                            "slug":"storage-and-organisation",
+                            "image":""
                         },
                         {
                             "name":"Office",
-                            "slug":"office"
+                            "slug":"office",
+                            "image":""
                         },
                         {
                             "name":"Lighting",
-                            "slug":"lighting"
+                            "slug":"lighting",
+                            "image":""
                         },
                         {
                             "name":"Kitchen & Dining",
                             "slug":"kitchen-and-dining",
+                            "image":"",
                             "sub":[
                                 {
                                     "name":"Cookware",
-                                    "slug":"cookware"
+                                    "slug":"cookware",
+                                    "image":""
                                 },
                                 {
                                     "name":"Drink & Barware",
-                                    "slug":"drink-and-barware"
+                                    "slug":"drink-and-barware",
+                                    "image":""
                                 },
                                 {
                                     "name":"Serveware",
-                                    "slug":"serveware"
+                                    "slug":"serveware",
+                                    "image":""
                                 }
                             ]
                         },
                         {
                             "name":"Food & Drinks",
-                            "slug":"food-and-drinks"
+                            "slug":"food-and-drinks",
+                            "image":""
                         },
                         {
                             "name":"Spirituality & Religion",
-                            "slug":"spirituality-and-religion"
+                            "slug":"spirituality-and-religion",
+                            "image":""
                         }
                     ]
                 },
                 {
                     "name":"Bath & Beauty",
                     "slug":"bath-and-beauty",
+                    "image":"",
                     "hovered":false,
                     "id":2,
                     "sub":[
                         {
                             "name":"Bath Accessories",
-                            "slug":"bath-acccessories"
+                            "slug":"bath-acccessories",
+                            "image":""
                         },
                         {
                             "name":"Makeup & Cosmetics",
-                            "slug":"makeup-and-cosmetics"
+                            "slug":"makeup-and-cosmetics",
+                            "image":""
                         },
                         {
                             "name":"Skin Care",
-                            "slug":"skin-care"
+                            "slug":"skin-care",
+                            "image":""
                         },
                         {
                             "name":"Hair Care",
-                            "slug":"hair-care"
+                            "slug":"hair-care",
+                            "image":""
                         },
                         {
                             "name":"Essential Oils",
-                            "slug":"essential-oils"
+                            "slug":"essential-oils",
+                            "image":""
                         },
                         {
                             "name":"Fragrances",
-                            "slug":"fragrances"
+                            "slug":"fragrances",
+                            "image":""
                         },
                         {
                             "name":"Soaps & Bath Bombs",
-                            "slug":"soaps-and-bath-bombs"
+                            "slug":"soaps-and-bath-bombs",
+                            "image":""
                         },
                         {
                             "name":"Face Masks & Coverings",
-                            "slug":"face-masks-and-coverings"
+                            "slug":"face-masks-and-coverings",
+                            "image":""
                         },
                         {
                             "name":"Spa kits & Gifts",
-                            "slug":"spa-kits-and-gifts"
+                            "slug":"spa-kits-and-gifts",
+                            "image":""
                         }
                     ]
                 },
                 {
                     "name":"Pet Supplies",
                     "slug":"pet-supplies",
+                    "image":"",
                     "hovered":false,
                     "id":3,
                     "sub":[
                         {
                             "name":"Pet Collars & Leashes",
-                            "slug":"pet-collars-and-leashes"
+                            "slug":"pet-collars-and-leashes",
+                            "image":""
                         },
                         {
                             "name":"Pet Furniture",
-                            "slug":"pet-furniture"
+                            "slug":"pet-furniture",
+                            "image":""
                         },
                         {
                             "name":"Pet Clothing & Shoes",
                             "slug":"pet-clothing-and-shoes",
+                            "image":"",
                             "sub":[
                                 {
                                     "name":"Pet Jackets & Hoodies",
@@ -236,11 +276,13 @@
                         },
                         {
                             "name":"Pet Bedding",
-                            "slug":"pet-bedding"
+                            "slug":"pet-bedding",
+                            "image":""
                         },
                         {
                             "name":"Pet Carriers & Houses",
-                            "slug":"pet-carriers-and-houses"
+                            "slug":"pet-carriers-and-houses",
+                            "image":""
                         }
                     ]
                 }

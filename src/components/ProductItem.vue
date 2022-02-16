@@ -13,15 +13,23 @@
         </div>
         <img class="product-image" :src="item.image" alt="product image">
         <p>{{item.name.slice(0,40)}}...</p>
-
+        <div class="product-cost-ratings">
+            <Rating :rating="item.rating" :count="item.reviewscount"></Rating>
+            <p class="current-cost">$ {{item.currentcost}}</p>
+            <!-- <p class="actual-cost">$ {{item.actualcost}}</p> -->
+        </div>
     </div>
 </template>
 <script>
 import {mapActions, mapState} from 'vuex'
+import Rating from './Rating.vue'
 import { EventBus } from '../event-bus';
 
 export default {
     name: 'ProductItem',
+    components:{
+        Rating
+    },
     data(){
         return{
             hover:false,
@@ -124,6 +132,18 @@ export default {
             width: 30px;
             height: 30px;
             padding: 0px 10px 0px 10px;
+        }
+    }
+    .product-cost-ratings{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            margin: 0 4px;
+            font-size: 12px;
+        }
+        .actual-cost{
+            text-decoration: line-through;
         }
     }
     // .cart-icon{

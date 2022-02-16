@@ -63,9 +63,9 @@ export default {
   body{
     margin: 0;
   }
-  .list-content{
-    min-height: 100vh;
+  .list-content, .fallback-content{
     background-color: #749490;
+    min-height: calc(100vh - 100px);
     p{
       margin: 0;
     }

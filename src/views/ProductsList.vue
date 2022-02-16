@@ -2,10 +2,13 @@
     <div>
         <Header/>
         <NavigationBar/>
-        <div class="products-grid">
+        <div v-if="products.length" class="products-grid">
             <div v-for="item in products" :key="item.id">
                 <ProductItem :item="item"/>
             </div>
+        </div>
+        <div class="fallback-content" v-else>
+            <p>Products list Page</p>
         </div>
         <Footer/>
     </div>

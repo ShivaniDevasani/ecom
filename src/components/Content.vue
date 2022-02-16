@@ -20,7 +20,6 @@ export default {
 <style lang="scss" scoped>
     .ecom-content{
         background-color: #749490;
-        height: 700px;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         img{
