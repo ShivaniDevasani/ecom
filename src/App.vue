@@ -64,7 +64,7 @@ export default {
     margin: 0;
   }
   .list-content, .fallback-content{
-    background-color: #749490;
+    background-color: #d5e9e6;
     min-height: calc(100vh - 100px);
     p{
       margin: 0;

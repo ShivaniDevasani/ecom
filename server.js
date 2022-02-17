@@ -180,6 +180,12 @@ app.get("/products",(req, res)=>{
   res.send(results)
 })
 
+app.get("/productdetails",(req, res)=>{
+  const {id} = req.query
+  const results = productsData.products.filter(product => (product.id === id));
+  res.send(results)
+})
+
 app.get("/category",(req, res)=>{
   const {cat, group, subcat, supercat} = req.query
   if(supercat){

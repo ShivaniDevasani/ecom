@@ -18,7 +18,7 @@ export default {
         background-color: #f5f5dc;
         padding: 5px 7px;
         border-radius: 15px;
-        margin: 5px;
+        margin: 5px 10px 5px 0;
         p{
             margin: 0;
             font-size: 12px;

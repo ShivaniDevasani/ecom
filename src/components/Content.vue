@@ -19,7 +19,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .ecom-content{
-        background-color: #749490;
+        background-color: #d5e9e6;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         img{

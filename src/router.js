@@ -9,6 +9,7 @@ import WishList from './views/WishList.vue'
 import SubCat from './views/SubCategory.vue'
 import Group from './views/CategoryGroup.vue'
 import Cat from './views/Category.vue'
+import Product from './views/Product.vue'
 
 Vue.use(Router)
 
@@ -63,6 +64,10 @@ export default new Router({
         {
             path:'/products/:supercat',
             component:SuperCat
+        },
+        {
+            path:'/product/:id',
+            component:Product
         },
         {
             path:'/user/wishlist/:id',

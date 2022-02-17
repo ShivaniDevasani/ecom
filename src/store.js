@@ -46,6 +46,12 @@ export default new Vuex.Store({
       const list = await axios.get(`http://localhost:3000/products?cat=${cat}&group=${group}&subcat=${subcat}&supercat=${supercat}&type=${type}`)
       commit('setProducts',list.data)
     },
+    async getProductDetails({commit},params){
+      const {id}=params
+      const list = await axios.get(`http://localhost:3000/productdetails?id=${id}`)
+      commit('setPagetype','Sub Category')
+      return list.data
+    },
     async updateWishlist({commit},params){
       const {itemId, userId, token} = params
       const response = await axios.post("http://localhost:3000/wishlist",

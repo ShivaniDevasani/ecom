@@ -1,5 +1,5 @@
 <template>
-    <div class="product-container">
+    <div class="product-container" @click="navigate(item.id)">
         <div>
         <div class="best-seller" v-if="item.bestseller">
             <p>Best Seller</p>
@@ -76,6 +76,9 @@ export default {
                 this.hover = false
             }
         },
+        navigate(val){
+            this.$router.push(`/product/${val}`)
+        },
         clickedIcon(id,name){
             this.item.wishlisted = !this.item.wishlisted
             //add or remove clicked id from user.wishlist and update wishlist json
@@ -110,6 +113,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .product-container{
+        cursor: pointer;
         position: relative;
         border-radius: 10px;
         padding: 10px;

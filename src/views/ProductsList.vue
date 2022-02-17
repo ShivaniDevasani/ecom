@@ -32,7 +32,7 @@ export default {
     .products-grid{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        background-color: #749490;
+        background-color: #d5e9e6;
         min-height: 100vh;
     }
 </style>
