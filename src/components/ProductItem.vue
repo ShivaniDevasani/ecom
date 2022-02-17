@@ -12,11 +12,19 @@
         </div> -->
         </div>
         <img class="product-image" :src="item.image" alt="product image">
-        <p>{{item.name.slice(0,40)}}...</p>
+        <p class="product-name">{{`${item.name.slice(0,40)}${item.name.length>40 ? '...' : ''}`}}</p>
         <div class="product-cost-ratings">
             <Rating :rating="item.rating" :count="item.reviewscount"></Rating>
             <p class="current-cost">$ {{item.currentcost}}</p>
             <!-- <p class="actual-cost">$ {{item.actualcost}}</p> -->
+        </div>
+        <div class="product-tags">
+            <Tag v-if="item.freeshipping" text="Free Shipping" type="shipping"></Tag>
+            <Tag v-if="item.remaining < 6" :text="`Only ${item.remaining} left. Order soon!`" type="ordersoon"></Tag>
+            <Tag v-if="item.handcrafted" text="Handcrafted" type="handcrafted"></Tag>
+            <Tag v-if="item.organic" text="Organic" type="organic"></Tag>
+            <Tag v-if="item.sustainable" text="Sustainably Sourced" type="sustainable"></Tag>
+            <Tag v-if="item.nontoxic" text="Certified Nontoxic" type="certified"></Tag>
         </div>
     </div>
 </template>
@@ -24,19 +32,19 @@
 import {mapActions, mapState} from 'vuex'
 import Rating from './Rating.vue'
 import { EventBus } from '../event-bus';
+import Tag from './Tag.vue'
 
 export default {
     name: 'ProductItem',
     components:{
-        Rating
+        Rating,
+        Tag
     },
     data(){
         return{
             hover:false,
             clicked:false,
-            // eslint-disable-next-line no-undef
             outlineicon: require("../../public/heart.png"),
-            // eslint-disable-next-line no-undef
             solidicon: require("../../public/heart-red.png")
         }
     },
@@ -69,7 +77,6 @@ export default {
             }
         },
         clickedIcon(id,name){
-            // eslint-disable-next-line vue/no-mutating-props
             this.item.wishlisted = !this.item.wishlisted
             //add or remove clicked id from user.wishlist and update wishlist json
             const token = localStorage.getItem('user')
@@ -109,17 +116,23 @@ export default {
         margin: 10px;
         .product-image{
             width: 100%;
-            height: 320px;
+            height: 350px;
+            object-fit: cover;
         }
+    }
+    .product-name{
+        text-align: left;
     }
     .best-seller{
         position: absolute;
         margin: 5px 0;
         background-color: #4f686b;
         color: white;
+        border-radius: 0 15px 15px 0;
         p{
             margin: 0;
             padding: 5px 10px;
+            font-size: 12px;
         }
     }
     .header-icon{
@@ -128,10 +141,13 @@ export default {
         align-items: center;
         cursor: pointer;
         right: 0;
+        margin: 10px 20px;
+        background-color: white;
+        padding: 5px;
+        border-radius: 50%;
         .large-icon{
             width: 30px;
             height: 30px;
-            padding: 0px 10px 0px 10px;
         }
     }
     .product-cost-ratings{
@@ -145,6 +161,10 @@ export default {
         .actual-cost{
             text-decoration: line-through;
         }
+    }
+    .product-tags{
+        display: flex;
+        flex-wrap: wrap;
     }
     // .cart-icon{
     //     position: absolute;

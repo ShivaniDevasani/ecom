@@ -8,7 +8,7 @@ To run in local open 2 terminals
 * Home page: http://localhost:8080
 * Navigation Menu data is added only for "Home & Living" category.
 * To check Navigation menu hover on Home & Living category on navigation bar.
-* Navigate to "Home & Living" --> "Home" --> "Furniture" --> "Kid's Furniture". Click on "Toddler Beds".
+* Navigate to "Home & Living" --> "Home" --> "Furniture" --> "Kid's Furniture". Click on "Toddler Beds". Example: http://localhost:8080/products/home-and-living/home/furniture/kids-furniture/toddler-beds
 * Wishlisting products without signing in is not yet implemented. So to check wishlisting feature please signin.
 * Add/remove products from wishlist.
 * Check wishlisted products by clicking on wishlist icon on header.

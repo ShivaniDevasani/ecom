@@ -38,7 +38,7 @@ export default {
 </script>
 <style lang="scss" scoped>
     .alert-list{
-        position: absolute;
+        position: fixed;
         top: 0;
         right: 0;
         padding: 120px 20px 20px 20px;
