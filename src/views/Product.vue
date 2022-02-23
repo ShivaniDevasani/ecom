@@ -29,6 +29,15 @@
                     <button>Add to Cart</button>
                     <div class="wishlist"></div>
                 </div>
+                <div class="view-reviews" @click="displayReviews">
+                    <p>{{viewReviewText}}</p>
+                    <div class="review-icon">
+                        <img src="../../public/down-arrow.png" alt="">
+                    </div>
+                </div>
+                <div v-if="showReviews" class="product-reviews">
+                    <Review v-for="review in product.reviews" :key="review.text" :review="review"></Review>
+                </div>
             </div>
         </div>
         <Footer/>
@@ -39,21 +48,35 @@ import commonComponents from "../mixins/commonComponents"
 import categoryDetails from "../mixins/categoryDetails"
 import Tag from "../components/Tag.vue"
 import Rating from "../components/Rating.vue"
+import Review from "../components/Review.vue"
 import {mapActions} from "vuex"
 
 export default {
     mixins:[commonComponents,categoryDetails],
     components:{
         Tag,
-        Rating
+        Rating,
+        Review
     },
     data(){
         return{
-            product:{}
+            product:{},
+            showReviews: true,
+            viewReviewText: "Hide Reviews"
         }
     },
     methods:{
-        ...mapActions(["getProductDetails"])
+        ...mapActions(["getProductDetails"]),
+        displayReviews(){
+            if(!this.showReviews){
+                this.viewReviewText = "Hide Reviews"
+                this.showReviews = true
+            }else{
+                this.viewReviewText = "Show Reviews"
+                this.showReviews = false
+            }
+            
+        }
     },
     created(){
         const params = this.$route.params
@@ -148,6 +171,21 @@ export default {
                 .actual-cost{
                     padding: 5px 10px 0 0;
                     text-decoration: line-through;
+                }
+            }
+            .view-reviews{
+                cursor: pointer;
+                padding: 20px 10px 0 10px;
+                display: flex;
+                align-items: center;
+                .review-icon{
+                    display: flex;
+                    align-items: center;
+                    margin-left: 8px;
+                    img{
+                        height: 15px;
+                        width: 15px;
+                    }
                 }
             }
         }

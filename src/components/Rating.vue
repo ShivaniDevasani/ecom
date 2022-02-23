@@ -1,8 +1,10 @@
 <template>
     <div class="rating">
         <img v-for="index in rating" :key="index" class="rating-image" src="../../public/star-solid.png" alt="star image">
-        <img v-for="index in (5 - rating)" :key="index" class="rating-image" src="../../public/star-outline.png" alt="star image">
-        <p>({{count}})</p>
+        <div class="empty-rating" v-if="rating < 5">
+            <img v-for="index in (5 - rating)" :key="index" class="rating-image" src="../../public/star-outline.png" alt="star image">
+        </div>
+        <p v-if="count >0">({{count}})</p>
     </div>
 </template>
 <script>
@@ -27,5 +29,9 @@ export default {
             margin: 0 5px;
             font-size: 12px;
         }
+    }
+    .empty-rating{
+        display: flex;
+        align-items: center;
     }
 </style>
