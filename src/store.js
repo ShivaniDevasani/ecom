@@ -10,7 +10,8 @@ export default new Vuex.Store({
     token: null,
     products:[],
     wishedProducts:[],
-    pagetype:''
+    pagetype:'',
+    search:''
   },
   mutations: {
     setUser(state, user) {
@@ -38,6 +39,9 @@ export default new Vuex.Store({
     },
     setPagetype(state, val) {
       state.pagetype = val
+    },
+    updateSearch(state, val){
+      state.search = val
     }
   },
   actions: {
@@ -49,8 +53,13 @@ export default new Vuex.Store({
     async getProductDetails({commit},params){
       const {id}=params
       const list = await axios.get(`http://localhost:3000/productdetails?id=${id}`)
-      commit('setPagetype','Sub Category')
+      commit('setPagetype','Product Page')
       return list.data
+    },
+    async getSearchSuggestions({commit},params){
+      const suggestions = await axios.get(`http://localhost:3000/suggest?q=${params}`)
+      commit('updateSearch',params)
+      return suggestions.data
     },
     async updateWishlist({commit},params){
       const {itemId, userId, token} = params

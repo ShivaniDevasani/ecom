@@ -1,38 +1,43 @@
 <template>
-    <div class="list-content product-content">
-        <div class="product-images">
-            <img :src="product.image" alt="product image">
+    <div>
+        <div class="loading-box" v-if="showLoading">
+            <img src="../../public/loading.gif" alt="loader">
         </div>
-        <div class="product-details">
-            <p class="product-name">{{product.name}}</p>
-            <div class="product-cost">
-                <p class="current-cost">$ {{product.currentcost}}</p>
-                <p v-if="product.currentcost !== product.actualcost" class="actual-cost">$ {{product.actualcost}}</p>
+        <div v-else class="list-content product-content">
+            <div class="product-images">
+                <img :src="product.image" alt="product image">
             </div>
-            <p v-if="product.discountpercentage > 0" class="cost-savings">You Save ${{product.actualcost - product.currentcost}} ({{product.discountpercentage}}%)</p>
-            <p class="product-description">{{product.description}}</p>
-            <div class="product-highlights">
-                <Tag v-if="product.freeshipping" text="Free Shipping" type="shipping"></Tag>
-                <Tag v-if="product.remaining < 6" :text="`Only ${product.remaining} left. Order soon!`" type="ordersoon"></Tag>
-                <Tag v-if="product.handcrafted" text="Handcrafted" type="handcrafted"></Tag>
-                <Tag v-if="product.organic" text="Organic" type="organic"></Tag>
-                <Tag v-if="product.sustainable" text="Sustainably Sourced" type="sustainable"></Tag>
-                <Tag v-if="product.nontoxic" text="Certified Nontoxic" type="certified"></Tag>
-            </div>
-            <div class="product-rating">
-                <Rating :rating="product.rating" :count="product.reviewscount"></Rating>
-            </div>
-            <div class="product-buttons">
-                <button>Add to Cart</button>
-                <div class="wishlist"></div>
-            </div>
-            <div class="view-reviews" @click="displayReviews">
-                <p>{{viewReviewText}}</p>
-                <div class="review-icon">
-                    <img src="../../public/down-arrow.png" alt="">
+            <div class="product-details">
+                <p class="product-name">{{product.name}}</p>
+                <div class="product-cost">
+                    <p class="current-cost">$ {{product.currentcost}}</p>
+                    <p v-if="product.currentcost !== product.actualcost" class="actual-cost">$ {{product.actualcost}}</p>
                 </div>
+                <p v-if="product.discountpercentage > 0" class="cost-savings">You Save ${{product.actualcost - product.currentcost}} ({{product.discountpercentage}}%)</p>
+                <p class="product-description">{{product.description}}</p>
+                <div class="product-highlights">
+                    <Tag v-if="product.freeshipping" text="Free Shipping" type="shipping"></Tag>
+                    <Tag v-if="product.remaining < 6" :text="`Only ${product.remaining} left. Order soon!`" type="ordersoon"></Tag>
+                    <Tag v-if="product.handcrafted" text="Handcrafted" type="handcrafted"></Tag>
+                    <Tag v-if="product.organic" text="Organic" type="organic"></Tag>
+                    <Tag v-if="product.sustainable" text="Sustainably Sourced" type="sustainable"></Tag>
+                    <Tag v-if="product.nontoxic" text="Certified Nontoxic" type="certified"></Tag>
+                </div>
+                <div class="product-rating">
+                    <Rating :rating="product.rating" :count="product.reviewscount"></Rating>
+                </div>
+                <div class="product-buttons">
+                    <button>Add to Cart</button>
+                    <div class="wishlist"></div>
+                </div>
+                <div class="view-reviews" @click="displayReviews">
+                    <p>{{viewReviewText}}</p>
+                    <div class="review-icon">
+                        <img src="../../public/down-arrow.png" alt="">
+                    </div>
+                </div>
+                <ProductReviews v-if="showReviews" :reviews="product.reviews" class="product-reviews"></ProductReviews>
             </div>
-            <ProductReviews v-if="showReviews" :reviews="product.reviews" class="product-reviews"></ProductReviews>
         </div>
     </div>
 </template>
@@ -51,6 +56,7 @@ export default {
         return{
             product:{},
             showReviews: false,
+            showLoading: true,
             viewReviewText: "Show Reviews"
         }
     },
@@ -70,12 +76,29 @@ export default {
     created(){
         const params = this.$route.params
         this.getProductDetails(params).then((res)=>{
-            this.product = res[0]
+            setTimeout(()=>{
+                this.product = res[0]
+                this.showLoading = false
+            },1000)
         })
     }
 }
 </script>
 <style lang="scss" scoped>
+    .loading-box{
+        background-color: #000;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            height: 200px;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+    }
     .product-content{
         display: grid;
         grid-template-columns: 1fr 1fr;

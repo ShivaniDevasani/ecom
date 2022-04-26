@@ -10,6 +10,7 @@ import SubCat from './views/SubCategory.vue'
 import Group from './views/CategoryGroup.vue'
 import Cat from './views/Category.vue'
 import Product from './views/Product.vue'
+import Search from './views/SearchPage.vue'
 
 Vue.use(Router)
 
@@ -68,6 +69,10 @@ export default new Router({
         {
             path:'/product/:id',
             component:Product
+        },
+        {
+            path:'/search/:word',
+            component:Search
         },
         {
             path:'/user/wishlist/:id',

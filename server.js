@@ -212,6 +212,17 @@ app.get("/category",(req, res)=>{
   }
 })
 
+app.get("/suggest",(req, res)=>{
+  const {q} = req.query
+  let results = productsData.products.map(product => (product.suggestions));
+  const suggestions = [].concat.apply([], results)
+  results = suggestions.filter((suggestion,index) => ((suggestion.indexOf(q) > -1) && (suggestions.indexOf(suggestion) === index)));
+  if(results.length === 0){
+    results = [q]
+  }
+  res.send(results)
+})
+
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
 });

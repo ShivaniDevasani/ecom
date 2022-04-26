@@ -16,6 +16,7 @@
             "type_slug":"toddler-beds",
             "description":"Clean lines and classic beadboard make the Catalina Collection as versatile as it is beautiful. Built to resemble a tiny cottage with charm to spare, this bed makes for sweet dreams and imaginative play. Plus, it’s constructed from made-to-last materials to ensure safety, stability and longevity.",
             "rating":5,
+            "suggestions":["bed","twin bed","shelter bed"],
             "reviews":[
                 {
                     "rating":5,
@@ -74,6 +75,7 @@
             "type_slug":"toddler-beds",
             "description":"Clean lines and classic beadboard make the Catalina Collection as versatile as it is beautiful. Built to resemble a tiny cottage with charm to spare, this bed makes for sweet dreams and imaginative play. Plus, it’s constructed from made-to-last materials to ensure safety, stability and longevity.",
             "rating":4,
+            "suggestions":["bed","toddler bed","shelter bed"],
             "reviews":[
                 {
                     "rating":3,
@@ -132,6 +134,7 @@
             "type_slug":"toddler-beds",
             "description":"Clean lines and classic beadboard make the Catalina Collection as versatile as it is beautiful. Built to resemble a tiny cottage with charm to spare, this bed makes for sweet dreams and imaginative play. Plus, it’s constructed from made-to-last materials to ensure safety, stability and longevity.",
             "rating":3,
+            "suggestions":["bed","modern bed","farmhouse bed"],
             "reviews":[
                 {
                     "rating":5,
@@ -176,7 +179,7 @@
         },
         {
             "id":"4",
-            "name":"US Twin size Kids house bed in dark wood color, Wood house shape bed Kids Montessori bed Nursery crib Toddler bed Floor bed Wood bed",
+            "name":"US Twin size Kids house bed in dark wood color, Wood house shape bed, Kids Montessori bed, Nursery crib, Toddler bed, Floor bed, Wood bed",
             "image":"https://i.etsystatic.com/23290600/r/il/74d803/3610193165/il_340x270.3610193165_46ft.jpg",
             "supercat":"Home and Living",
             "group":"Home",
@@ -190,6 +193,7 @@
             "type_slug":"toddler-beds",
             "description":"Clean lines and classic beadboard make the Catalina Collection as versatile as it is beautiful. Built to resemble a tiny cottage with charm to spare, this bed makes for sweet dreams and imaginative play. Plus, it’s constructed from made-to-last materials to ensure safety, stability and longevity.",
             "rating":5,
+            "suggestions":["bed","twin bed","wood house bed", "kids montessori bed", "nursery crib", "toddler bed", "floor bed", "wood bed"],
             "reviews":[
                 {
                     "rating":5,
@@ -248,6 +252,7 @@
             "type_slug":"toddler-beds",
             "description":"Clean lines and classic beadboard make the Catalina Collection as versatile as it is beautiful. Built to resemble a tiny cottage with charm to spare, this bed makes for sweet dreams and imaginative play. Plus, it’s constructed from made-to-last materials to ensure safety, stability and longevity.",
             "rating":1,
+            "suggestions":["bed","house bed"],
             "reviews":[
                 {
                     "rating":5,
@@ -306,6 +311,7 @@
             "type_slug":"toddler-beds",
             "description":"Clean lines and classic beadboard make the Catalina Collection as versatile as it is beautiful. Built to resemble a tiny cottage with charm to spare, this bed makes for sweet dreams and imaginative play. Plus, it’s constructed from made-to-last materials to ensure safety, stability and longevity.",
             "rating":5,
+            "suggestions":["bed","upholstered bed","footboard bed"],
             "reviews":[
                 {
                     "rating":5,
@@ -364,6 +370,7 @@
             "type_slug":"toddler-beds",
             "description":"Clean lines and classic beadboard make the Catalina Collection as versatile as it is beautiful. Built to resemble a tiny cottage with charm to spare, this bed makes for sweet dreams and imaginative play. Plus, it’s constructed from made-to-last materials to ensure safety, stability and longevity.",
             "rating":5,
+            "suggestions":["bed"],
             "reviews":[
                 {
                     "rating":5,
@@ -422,6 +429,7 @@
             "type_slug":"toddler-beds",
             "description":"Clean lines and classic beadboard make the Catalina Collection as versatile as it is beautiful. Built to resemble a tiny cottage with charm to spare, this bed makes for sweet dreams and imaginative play. Plus, it’s constructed from made-to-last materials to ensure safety, stability and longevity.",
             "rating":5,
+            "suggestions":["bed","step-up bed"],
             "reviews":[
                 {
                     "rating":5,
@@ -480,6 +488,7 @@
             "type_slug":"toddler-beds",
             "description":"Clean lines and classic beadboard make the Catalina Collection as versatile as it is beautiful. Built to resemble a tiny cottage with charm to spare, this bed makes for sweet dreams and imaginative play. Plus, it’s constructed from made-to-last materials to ensure safety, stability and longevity.",
             "rating":5,
+            "suggestions":["bed","bunk bed","twin bed"],
             "reviews":[
                 {
                     "rating":5,

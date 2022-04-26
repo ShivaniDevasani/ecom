@@ -2,12 +2,19 @@
     <div class="ecom-header">
         <EcomLogo/>
         <div class="ecom-head-items">
-            <div class="ecom-search-bar">
-                <div class="ecom-search-textbox">
-                    <input type="text">
+            <div class="ecom-search-container">
+                <div class="ecom-search-bar">
+                    <div class="ecom-search-textbox">
+                        <input class="searchbar-input" type="text" @keydown.down="selectSuggestionDown" @keydown.up="selectSuggestionUp" @keyup.enter="navigate(`/search/${search}`)" @input="updateInput">
+                    </div>
+                    <div class="search-icon">
+                        <img class="large-icon" src="../../public/search.png" alt="">
+                    </div>
                 </div>
-                <div class="header-icon">
-                    <img class="large-icon" src="../../public/search.png" alt="">
+                <div class="ecom-search-suggestions" v-if="showSuggested" v-click-outside="onClickOutside">
+                    <ul>
+                        <li :class="{'selected-suggestion':index===selectedSuggestionIndex}" @mouseover="hoverSuggestion(item,index)" @click="navigate(`/search/${search}`)" v-for="(item,index) in suggested" :key="item">{{item}}</li>
+                    </ul>
                 </div>
             </div>
             <div v-if="!isLoggedIn" class="header-icon" @click="navigate('/signin')">
@@ -40,6 +47,9 @@ export default {
     data(){
         return{
             openProfile:false,
+            suggested:[],
+            showSuggested: false,
+            selectedSuggestionIndex: -1,
         }
     },
     components:{
@@ -50,11 +60,12 @@ export default {
         ...mapState({
             userName: (state) => (state.user && state.user.username) ? state.user.username : '',
             id: (state) => (state.user && state.user.id) ? state.user.id : '',
+            search: (state) => state.search,
         })
     },
     methods:{
-        ...mapMutations(["resetState", "removeToken"]),
-        ...mapActions(["getWishlist"]),
+        ...mapMutations(["resetState", "removeToken", "updateSearch"]),
+        ...mapActions(["getWishlist","getSearchSuggestions"]),
         viewProfile(){
             const a = this.openProfile
             this.openProfile = !a;
@@ -68,6 +79,45 @@ export default {
                 await this.getWishlist({id:this.id})
             }
             this.$router.push(val)
+        },
+        updateInput(e) {
+            let searchWord = e.target.value
+            if(searchWord.length > 2){
+                this.getSearchSuggestions(searchWord).then((res)=>{
+                    this.suggested = res
+                    this.showSuggested = true
+                })
+            }else{
+                this.suggested = []
+                this.showSuggested = false
+            }
+            this.updateSearch(searchWord)
+        },
+        onClickOutside() {
+            this.showSuggested = false
+            this.selectedSuggestionIndex = -1
+        },
+        hoverSuggestion(word,val){
+            this.selectedSuggestionIndex = val
+            this.updateSearch(word)
+        },
+        selectSuggestionDown(){
+            if(this.selectedSuggestionIndex === (this.suggested.length - 1)){
+                this.selectedSuggestionIndex = 0
+            }
+            else{
+                this.selectedSuggestionIndex++
+            }
+            this.updateSearch(this.suggested[this.selectedSuggestionIndex])
+        },
+        selectSuggestionUp(){
+            if(this.selectedSuggestionIndex <= 0){
+                this.selectedSuggestionIndex = (this.suggested.length - 1)
+            }
+            else{
+                this.selectedSuggestionIndex--
+            }
+            this.updateSearch(this.suggested[this.selectedSuggestionIndex])
         }
     }
 }
@@ -101,15 +151,35 @@ export default {
             }
         }
     }
+    .ecom-search-suggestions{
+        z-index: 20;
+        position: absolute;
+        background-color: #f5f5dc;
+        width: 507px;
+        text-align: left;
+        -moz-box-shadow: 0px 0px 4px 1px grey;
+        -webkit-box-shadow: 0px 0px 4px 1px grey;
+        box-shadow: 0px 0px 4px 1px  grey;
+        margin: 0px 10px;
+        ul{
+            list-style: none;
+            padding: 0;
+            li{
+                margin-bottom: 5px;
+                padding: 1px 20px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    .selected-suggestion{
+        background-color: white;
+    }
     .header-icon{
         display: flex;
         align-items: center;
         cursor: pointer;
-        .large-icon{
-            width: 30px;
-            height: 30px;
-            margin: 0px 10px 0px 10px;
-        }
         .small-icon{
             width: 10px;
             height: 10px;
@@ -123,7 +193,15 @@ export default {
             border-radius: 10px;
         }
     }
-    
+    .search-icon{
+        display: flex;
+        align-items: center;
+    }
+    .large-icon{
+        width: 30px;
+        height: 30px;
+        margin: 0px 10px 0px 10px;
+    }
     .user-dropdown{
         position: absolute;
         margin: 40px 0px 20px 0px;

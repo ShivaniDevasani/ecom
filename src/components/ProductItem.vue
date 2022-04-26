@@ -5,7 +5,7 @@
             <p>Best Seller</p>
         </div>
         <div class="header-icon">
-            <img class="large-icon" :src="getIcon" alt="" @mouseover="overIcon" @mouseleave="leftIcon" @click="clickedIcon(item.id,item.name)">
+            <img class="large-icon" :src="getIcon" alt="" @mouseover="overIcon" @mouseleave="leftIcon" @click.stop="clickedIcon(item.id,item.name)">
         </div>
         <!-- <div class="cart-icon">
             <img class="large-icon" :src="cartIcon" alt="" @mouseover="overIcon" @mouseleave="leftIcon" @click="clickedIcon(item.id)">
